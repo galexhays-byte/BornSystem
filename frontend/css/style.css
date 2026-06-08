@@ -1,0 +1,240 @@
+:root {
+  --bg: #0b1120;
+  --surface: #141d2d;
+  --surface-strong: #1f2a42;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --primary: #38bdf8;
+  --primary-strong: #0ea5e9;
+  --accent: #facc15;
+  --danger: #f87171;
+  --success: #4ade80;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #111827 35%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.app-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 24px 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  letter-spacing: -0.04em;
+}
+
+header p {
+  color: var(--muted);
+  margin: 10px 0 0;
+  max-width: 760px;
+  line-height: 1.7;
+}
+
+.controls {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+button,
+select,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(56, 189, 248, 0.18);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.panel-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.17);
+}
+
+.panel-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.panel-card p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.panel-card label {
+  display: block;
+  margin: 14px 0 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.panel-card input,
+.panel-card select,
+.panel-card textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #0f172a;
+  color: var(--text);
+  padding: 12px 14px;
+}
+
+.panel-card select {
+  appearance: none;
+}
+
+.panel-card textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.tool-description {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  min-height: 1.4rem;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.output-panel {
+  margin-top: 28px;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.output-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.status-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  background: rgba(148, 163, 184, 0.16);
+  color: var(--text);
+}
+
+.status-label.loading {
+  background: rgba(56, 189, 248, 0.16);
+  color: var(--primary);
+}
+
+.status-label.success {
+  background: rgba(74, 222, 128, 0.16);
+  color: var(--success);
+}
+
+.status-label.error {
+  background: rgba(248, 113, 113, 0.16);
+  color: var(--danger);
+}
+
+.output {
+  width: 100%;
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  min-height: 280px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.history-list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.history-item {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+}
+
+.history-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.history-item.active {
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.history-item.empty {
+  cursor: default;
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}

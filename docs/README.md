@@ -18,3 +18,5 @@ This directory contains all documentation for the BornSystem project, including 
 - `/nodes` — node behavior and communication specs
 - `/workflows` — CI/CD and automation documentation
 - `/design` — UI/UX notes and frontend design references
+- `Automation-Architecture.md` — LLM agent, tool adapter, and sandbox architecture
+- `Repository-Sourcing.md` — external tool, firmware, and repo source inventory

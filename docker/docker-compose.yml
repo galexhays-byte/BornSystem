@@ -1,0 +1,60 @@
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LLM_API_KEY=${LLM_API_KEY:-}
+    depends_on:
+      - kali-node
+      - ubuntu-node
+    volumes:
+      - ../backend/src:/app/src:ro
+      - ../database:/app/database:ro
+      - ../storage:/app/storage:ro
+    networks:
+      - bornsystem-net
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../frontend/public:/app/public:ro
+      - ../frontend/css:/app/public/css:ro
+      - ../frontend/js:/app/public/js:ro
+    networks:
+      - bornsystem-net
+
+  kali-node:
+    build:
+      context: ../nodes/kali
+      dockerfile: Dockerfile
+    container_name: bornsystem-kali-node
+    ports:
+      - "8001:8001"
+    volumes:
+      - ../storage:/app/storage:ro
+    networks:
+      - bornsystem-net
+
+  ubuntu-node:
+    build:
+      context: ../nodes/ubuntu
+      dockerfile: Dockerfile
+    container_name: bornsystem-ubuntu-node
+    ports:
+      - "8002:8002"
+    volumes:
+      - ../storage:/app/storage:ro
+    networks:
+      - bornsystem-net
+
+networks:
+  bornsystem-net:
+    driver: bridge

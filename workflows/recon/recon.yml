@@ -1,0 +1,15 @@
+name: Recon Workflow
+
+on:
+  push:
+    paths:
+      - 'workflows/recon/**'
+      - 'docs/**'
+
+jobs:
+  recon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Echo recon placeholder
+        run: echo "Recon workflow placeholder for BornSystem"

@@ -1,0 +1,12 @@
+{
+  "name": "bornsystem-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve public -l 3000",
+    "build": "echo \"No build step configured for static frontend\""
+  },
+  "devDependencies": {
+    "serve": "^15.0.0"
+  }
+}

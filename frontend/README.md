@@ -8,6 +8,7 @@ It will be lightweight, fast, and focused on system control and visualization.
 - Dashboard UI
 - Node status and health monitoring
 - Workflow execution interface
+- Node action execution and orchestration control
 - Authentication UI
 - Real-time logs and system events
 - Settings and configuration panels

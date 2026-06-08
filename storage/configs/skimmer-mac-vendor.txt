@@ -1,0 +1,8 @@
+# Common device MAC OUIs for field signal and hardware identification
+00:1A:2B  Espressif Inc (ESP32/IoT hardware)
+00:1E:C0  Huawei Technologies Co.,Ltd
+B8:27:EB  Raspberry Pi Foundation
+DC:A6:32  Raspberry Pi Foundation
+00:0B:57  Smanos (IoT/security gear)
+00:16:6C  Roku, Inc.
+FC:FB:FB  Bluetooth speaker / audio device

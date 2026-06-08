@@ -1,0 +1,15 @@
+name: Scanning Workflow
+
+on:
+  push:
+    paths:
+      - 'workflows/scanning/**'
+      - 'docs/**'
+
+jobs:
+  scanning:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Echo scanning placeholder
+        run: echo "Scanning workflow placeholder for BornSystem"

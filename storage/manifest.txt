@@ -1,0 +1,49 @@
+# BornSystem Storage Manifest
+
+This manifest lists cybersecurity tools, agent frameworks, firmware sources, and package catalogs that should be staged in storage or documented for deployment.
+
+## Primary Package Catalogs
+- BlackArch Linux catalog: https://github.com/BlackArch/blackarch
+- Awesome AI Hacking Agents: https://github.com/EvanThomasLuke/Awesome-AI-Hacking-Agents/blob/main/README.md
+
+## Offensive Security Tools
+- Nmap: https://github.com/nmap/nmap
+- Masscan: https://github.com/robertdavidgraham/masscan
+- Metasploit Framework: https://github.com/rapid7/metasploit-framework
+- Hydra: https://github.com/vanhauser-thc/thc-hydra
+- sqlmap: https://github.com/sqlmapproject/sqlmap
+- Gobuster: https://github.com/OJ/gobuster
+- Amass: https://github.com/OWASP/Amass
+- Dirb: https://github.com/v0re/dirb
+- Bettercap: https://github.com/bettercap/bettercap
+- Cameradar: https://github.com/Ullaakut/cameradar
+
+## Detection / Monitoring Tools
+- Suricata: https://github.com/OISF/suricata
+- Snort: https://www.snort.org/
+- Zeek: https://github.com/zeek/zeek
+- Wireshark: https://github.com/wireshark/wireshark
+
+## RF / IoT / Firmware Tools
+- rtl_433: https://github.com/merbanan/rtl_433
+- ESP32 Marauder firmware: https://github.com/justcallmekoko/ESP32Marauder
+- Proxmark3 / Iceman fork: https://github.com/Proxmark/proxmark3
+- Mayhem firmware for HackRF / PortaPack: https://github.com/erikarn/Mayhem
+- GQRX: https://github.com/csete/gqrx
+- URH: https://github.com/jopohl/urh
+
+## AI Automation / Agent Frameworks
+- tgpt: https://github.com/aandrew-me/tgpt
+- ShellGPT: https://github.com/sagelga/gpt-shell
+- LangChain: https://github.com/langchain-ai/langchain
+- Autogen / AutoGPT: search GitHub for `Autogen` or `AutoGPT` agent frameworks
+- HexStrike AI MCP Agents: https://github.com/0x4m4/hexstrike-ai
+- Allama AI security automation: https://github.com/digitranslab/allama
+- Agent Hub (MCP orchestration): https://github.com/nathangtg/agent-hub
+- Guardian Agent security orchestration: https://github.com/Threat-Vector-Security/guardian-agent
+- SkillGuard agent security scanner: https://github.com/Muhammad-Qasim-Munir/skillguard
+
+## Notes
+- Use `storage/binaries/` for prebuilt packages and companion tool binaries.
+- Use `storage/scripts/` for automation scripts, install helpers, and agent launch scripts.
+- Keep this manifest updated as new tools and cloud sources are added.

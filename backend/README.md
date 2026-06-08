@@ -5,17 +5,20 @@ The backend handles all system logic, APIs, authentication, orchestration, and c
 ## Responsibilities
 
 - Core API endpoints
-- Authentication and session management
-- Node orchestration (Kali, Ubuntu, etc.)
-- Python and Node hybrid backend logic
-- System services and background tasks
-- Data processing and automation
+- Node orchestration and execution
+- Policy and safety enforcement
+- Runtime state management
+- FastAPI-based service layer
+- Tool and workflow integration
 
-## Planned Structure
+## Current Structure
 
-- `server.js` — Node backend entry point
-- `main.py` — Python backend logic
-- `/api` — REST endpoints
-- `/services` — internal backend modules
-- `/workers` — background jobs
-- `/config` — environment and system configuration
+- `requirements.txt` — Python dependencies
+- `Dockerfile` — backend Python container
+- `/src/main.py` — FastAPI entrypoint
+- `/src/api/` — REST endpoint modules
+- `/src/core/` — orchestration and node management
+
+## Notes
+
+The current production scaffold uses the `/src` package inside backend for the core BornSystem backend implementation.

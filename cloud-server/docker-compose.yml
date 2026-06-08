@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  minio:
+    image: minio/minio:latest
+    container_name: bornsystem-minio
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ROOT_USER: "minioadmin"
+      MINIO_ROOT_PASSWORD: "minioadmin"
+    command: server /data
+    volumes:
+      - ./data/minio:/data
+    networks:
+      - bornsystem-net
+
+  postgres-db:
+    image: postgres:15
+    container_name: bornsystem-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "bornsystem"
+      POSTGRES_PASSWORD: "bornsystem"
+      POSTGRES_DB: "bornsystem"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    networks:
+      - bornsystem-net
+
+networks:
+  bornsystem-net:
+    driver: bridge

@@ -1,0 +1,8 @@
+# Targeted IoT and surveillance service scan options
+# Use these payloads to avoid overly broad scanning and keep output focused.
+--ports 80,443,554,8000,8001,8080,8443,554,1900,5353,9100
+-sS
+-O
+--script=banner
+--script=http-title
+--script=ssl-cert
